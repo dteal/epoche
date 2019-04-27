@@ -180,59 +180,6 @@ delay = 0.1
 forward = 0.5
 height = 0.9
 
-def right_up():
-    # right up
-    pod.setTarget(6, angle_to_steps(height))
-    pod.setTarget(8, angle_to_steps(height))
-    pod.setTarget(10, angle_to_steps(-height))
-    time.sleep(delay)
-def right_forward(d):
-    # right forward
-    pod.setTarget(0, angle_to_steps(-forward*d))
-    pod.setTarget(2, angle_to_steps(-forward*d))
-    pod.setTarget(4, angle_to_steps(forward*d))
-    time.sleep(delay)
-def right_forward_rotate(d):
-    pod.setTarget(0, angle_to_steps(-forward*d))
-    pod.setTarget(2, angle_to_steps(-forward*d))
-    pod.setTarget(4, angle_to_steps(-forward*d))
-    time.sleep(delay)
-def left_back_rotate(d):
-    pod.setTarget(1, angle_to_steps(-forward*d))
-    pod.setTarget(3, angle_to_steps(-forward*d))
-    pod.setTarget(5, angle_to_steps(-forward*d))
-    time.sleep(delay)
-def left_back(d):
-    pod.setTarget(1, angle_to_steps(forward*d))
-    pod.setTarget(3, angle_to_steps(-forward*d))
-    pod.setTarget(5, angle_to_steps(-forward*d))
-    time.sleep(delay)
-def right_down():
-    pod.setTarget(6, angle_to_steps(0))
-    pod.setTarget(8, angle_to_steps(0))
-    pod.setTarget(10, angle_to_steps(0))
-    time.sleep(delay)
-def left_up():
-    pod.setTarget(7, angle_to_steps(height))
-    pod.setTarget(9, angle_to_steps(-height))
-    pod.setTarget(11, angle_to_steps(-height))
-    time.sleep(delay)
-def left_forward(d):
-    pod.setTarget(1, angle_to_steps(-forward*d))
-    pod.setTarget(3, angle_to_steps(forward*d))
-    pod.setTarget(5, angle_to_steps(forward*d))
-    time.sleep(delay)
-def right_back(d):
-    pod.setTarget(0, angle_to_steps(forward*d))
-    pod.setTarget(2, angle_to_steps(forward*d))
-    pod.setTarget(4, angle_to_steps(-forward*d))
-    time.sleep(delay)
-def left_down():
-    pod.setTarget(7, angle_to_steps(0))
-    pod.setTarget(9, angle_to_steps(0))
-    pod.setTarget(11, angle_to_steps(0))
-    time.sleep(delay)
-
 def dowalk(d):
     right_up()
     right_forward(d)

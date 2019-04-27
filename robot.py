@@ -165,9 +165,9 @@ class KinectControlProcess(multiprocessing.Process):
 def run():
     """Main loop."""
 
-    command_queue = multiprocessing.Queue()
-    motor = MotorControlProcess(command_queue)
-    motor.start()
+    #command_queue = multiprocessing.Queue()
+    #motor = MotorControlProcess(command_queue)
+    #motor.start()
 
     #image_queue = multiprocessing.Queue()
     #kinect = KinectControlProcess(image_queue)
